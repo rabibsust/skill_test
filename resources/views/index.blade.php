@@ -32,6 +32,7 @@
                                 <th>Price per item</th>
                                 <th>Total value number</th>
                                 <th>Datetime submitted</th>
+                                <th>Action</th>
                             </tr></thead>
                             <tbody id="product_data_list"></tbody>
                         </table>
@@ -89,9 +90,9 @@
             var row = "<tr>";
             $.each(obj,function(j,dobj)
             {
-                row = row+"<td>"+dobj+"</td>";
+                row = row+"<td class='prd'>"+dobj+"</td>";
             });
-            row = row+"</tr>";
+            row = row+"<td><a href='#' class='btn btn-primary'>Edit</a></td></tr>";
             $("#product_data_list").append($(row));
         });
         $("#total_sum").append(data[0]);

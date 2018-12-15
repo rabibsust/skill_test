@@ -38,7 +38,7 @@ class CalculateController extends Controller
             $data = [$allvalue, $newdata];
             return $data;
 
-        } catch(Exception $e) {
+        } catch(\Exception $e) {
 
             return ['error' => true, 'message' => $e->getMessage()];
 
